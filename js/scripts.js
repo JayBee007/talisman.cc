@@ -30,5 +30,10 @@ talismanApp.config(function ($routeProvider) {
       controller: 'mainController',
       templateUrl: '/views/carousel.html'
     })
+    .when('/mandarine',
+    {
+      controller: 'mainController',
+      templateUrl: '/views/mandarine.html'
+    })
     .otherwise({redirectTo:'/'});
 });
