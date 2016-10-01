@@ -104,3 +104,17 @@ footer p{
     color: #fff;
     background-color: #2d5c88;
 }
+
+/* The starting CSS styles for the enter animation */
+.view.ng-enter {
+  transition:0.5s linear all;
+  transform: translateY(30px);
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.view.ng-enter.ng-enter-active {
+  transform: translateY(0);
+  opacity:1;
+}
+

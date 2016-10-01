@@ -16,7 +16,7 @@
 });
 }());
 
-var talismanApp = angular.module('talismanApp', ['ngRoute']);
+var talismanApp = angular.module('talismanApp', ['ngRoute', 'ngAnimate']);
 
 talismanApp.controller('mainController', function mainController($scope){
   
