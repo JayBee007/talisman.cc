@@ -2,6 +2,10 @@
   $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if( $(this).attr("href")=="#carousel-example-generic") return;
+    if( $(this).attr("href")=="#home") {
+      $('html,body').animate({scrollTop:0},'slow');
+      return false;
+    } 
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -15,6 +19,13 @@
   });
 });
 }());
+
+// (function (){
+//   $('#home').click(function(){
+//         $('html, body').animate({scrollTop:308}, 'slow');
+//         return false;
+//     });
+// }());
 
 var talismanApp = angular.module('talismanApp', ['ngRoute', 'ngAnimate']);
 
